@@ -252,6 +252,7 @@ function updatePreview() {
   var items = [];
   cards.forEach(function(card) {
     var sel = card.querySelector('select');
+    if (!sel) return;
     var val = parseInt(sel.value);
     if (val > 0) {
       var name = card.getAttribute('data-event');
@@ -297,6 +298,7 @@ function submitRSVP(e) {
   var screenings = [];
   cards.forEach(function(card) {
     var sel = card.querySelector('select');
+    if (!sel) return;
     var val = parseInt(sel.value);
     if (val > 0) {
       screenings.push(card.getAttribute('data-event') + ' (' + val + (val === 1 ? ' ticket' : ' tickets') + ')');
