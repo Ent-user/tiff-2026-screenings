@@ -323,16 +323,40 @@ function submitRSVP(e) {
     body += '\nTeammates:\n' + teammates.map(function(t){ return '- ' + t; }).join('\n') + '\n';
   }
 
-  window.location.href = 'mailto:chwastiak@spotify.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+  var btn = document.querySelector('.submit-btn');
+  btn.textContent = 'Submitting...';
+  btn.disabled = true;
 
-  document.getElementById('mainPage').style.display = 'none';
-  var confirm = document.getElementById('confirmPage');
-  confirm.classList.add('visible');
-  var details = document.getElementById('confirmDetails');
-  details.innerHTML = '<h3 style="font-size:12px;color:#666;text-transform:uppercase;letter-spacing:1px;margin-bottom:16px;font-weight:600">Your Selections</h3>' +
-    screenings.map(function(s) {
-      return '<div style="padding:8px 0;border-bottom:1px solid #222;font-size:14px;color:#fff">' + s + '</div>';
-    }).join('');
+  var formData = new FormData();
+  formData.append('name', name);
+  formData.append('email', email);
+  formData.append('company', company || 'N/A');
+  formData.append('screenings', screenings.join(', '));
+  formData.append('teammates', teammates.length > 0 ? teammates.join(', ') : 'None');
+  formData.append('_subject', 'TIFF 2026 Client Screening RSVP - ' + name);
+  formData.append('_captcha', 'false');
+  formData.append('_template', 'table');
+
+  fetch('https://formsubmit.co/ajax/chwastiak@spotify.com', {
+    method: 'POST',
+    body: formData
+  }).then(function(res) {
+    return res.json();
+  }).then(function() {
+    document.getElementById('mainPage').style.display = 'none';
+    var confirm = document.getElementById('confirmPage');
+    confirm.classList.add('visible');
+    var details = document.getElementById('confirmDetails');
+    details.innerHTML = '<h3 style="font-size:12px;color:#666;text-transform:uppercase;letter-spacing:1px;margin-bottom:16px;font-weight:600">Your Selections</h3>' +
+      screenings.map(function(s) {
+        return '<div style="padding:8px 0;border-bottom:1px solid #222;font-size:14px;color:#fff">' + s + '</div>';
+      }).join('');
+    window.scrollTo(0, 0);
+  }).catch(function() {
+    window.location.href = 'mailto:chwastiak@spotify.com?subject=' + encodeURIComponent('TIFF 2026 Client Screening RSVP - ' + name) + '&body=' + encodeURIComponent(body);
+    btn.textContent = 'Submit Request';
+    btn.disabled = false;
+  });
 
   return false;
 }
