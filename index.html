@@ -46,6 +46,7 @@ h1{font-size:36px;font-weight:800;letter-spacing:-.5px;margin-bottom:12px;color:
 label{display:block;font-size:13px;color:#999;margin-bottom:6px;font-weight:500}
 input,select,textarea{width:100%;padding:14px 16px;background:#111;border:1px solid #333;border-radius:8px;color:#fff;font-size:15px;font-family:inherit}
 textarea{resize:vertical;min-height:80px}
+.teammate-section{margin-bottom:24px}
 .teammate-row{display:grid;grid-template-columns:1fr 1fr auto;gap:12px;margin-bottom:12px;align-items:end}
 .add-btn{background:none;border:1px dashed #333;border-radius:8px;color:#888;padding:10px 16px;font-size:14px;cursor:pointer;width:100%;margin-bottom:28px;font-family:inherit}
 .add-btn:hover{border-color:#1db954;color:#1db954}
@@ -70,6 +71,7 @@ footer p+p{margin-top:4px}
 </style>
 </head>
 <body>
+
 <div class="wrap" id="mainPage">
 <header>
   <div class="logo">
@@ -77,9 +79,11 @@ footer p+p{margin-top:4px}
     <span>× TIFF 2026</span>
   </div>
   <h1>Client Screenings</h1>
-  <p class="subtitle">A curated selection of premieres, conversations, and exclusive screenings. Select your events below and RSVP to confirm your attendance.</p>
+  <p class="subtitle">A curated selection of premieres, conversations, and exclusive screenings. Select your events below and RSVP to request your seats. Tickets are limited and subject to confirmation.</p>
 </header>
+
 <section style="padding:40px 0" id="events">
+
 <div class="day-group">
   <h2 class="day">Saturday, September 12</h2>
   <div class="card" data-event="Visionaries: Sir Gary Oldman">
@@ -88,11 +92,12 @@ footer p+p{margin-top:4px}
     <p class="desc">An intimate onstage conversation with the Oscar-winning actor, in Toronto for the premiere of Slow Horses Season 6.</p>
     <div class="tags"><span class="tag">Conversation</span><a class="tiff-link" href="https://tiff.net/films/visionaries-gary-oldman" target="_blank" rel="noopener">View on TIFF.net ↗</a></div>
     <div class="card-footer">
-      <select class="ticket-select" onchange="updateCard(this)"><option value="0">— Select tickets —</option><option value="1">1 ticket</option><option value="2">2 tickets</option></select>
+      <select class="ticket-select" onchange="updateCard(this)"><option value="0">— Request tickets —</option><option value="1">1 ticket</option><option value="2">2 tickets</option></select>
       <span class="check">✓ Selected</span>
     </div>
   </div>
 </div>
+
 <div class="day-group">
   <h2 class="day">Sunday, September 13</h2>
   <div class="card" data-event="Closing Night">
@@ -102,11 +107,12 @@ footer p+p{margin-top:4px}
     <p class="credits">Dir: Cody Fern · Sarah Paulson, Naomi Watts</p>
     <div class="tags"><span class="tag">World Premiere</span><span class="tag">Q&A</span><a class="tiff-link" href="https://tiff.net/films/closing-night" target="_blank" rel="noopener">View on TIFF.net ↗</a></div>
     <div class="card-footer">
-      <select class="ticket-select" onchange="updateCard(this)"><option value="0">— Select tickets —</option><option value="1">1 ticket</option><option value="2">2 tickets</option><option value="3">3 tickets</option></select>
+      <select class="ticket-select" onchange="updateCard(this)"><option value="0">— Request tickets —</option><option value="1">1 ticket</option><option value="2">2 tickets</option><option value="3">3 tickets</option></select>
       <span class="check">✓ Selected</span>
     </div>
   </div>
 </div>
+
 <div class="day-group">
   <h2 class="day">Monday, September 14</h2>
   <div class="card" data-event="The Life and Deaths of Wilson Shedd">
@@ -116,11 +122,12 @@ footer p+p{margin-top:4px}
     <p class="credits">Dir: Tim Blake Nelson · Amanda Seyfried</p>
     <div class="tags"><span class="tag">World Premiere</span><span class="tag">Q&A</span><a class="tiff-link" href="https://tiff.net/films/the-life-and-deaths-of-wilson-shedd" target="_blank" rel="noopener">View on TIFF.net ↗</a></div>
     <div class="card-footer">
-      <select class="ticket-select" onchange="updateCard(this)"><option value="0">— Select tickets —</option><option value="1">1 ticket</option><option value="2">2 tickets</option><option value="3">3 tickets</option></select>
+      <select class="ticket-select" onchange="updateCard(this)"><option value="0">— Request tickets —</option><option value="1">1 ticket</option><option value="2">2 tickets</option><option value="3">3 tickets</option></select>
       <span class="check">✓ Selected</span>
     </div>
   </div>
 </div>
+
 <div class="day-group">
   <h2 class="day">Tuesday, September 15</h2>
   <div class="card" data-event="Look Back">
@@ -130,11 +137,12 @@ footer p+p{margin-top:4px}
     <p class="credits">Dir: Hirokazu Kore-eda</p>
     <div class="tags"><span class="tag">North American Premiere</span><a class="tiff-link" href="https://tiff.net/films/look-back" target="_blank" rel="noopener">View on TIFF.net ↗</a></div>
     <div class="card-footer">
-      <select class="ticket-select" onchange="updateCard(this)"><option value="0">— Select tickets —</option><option value="1">1 ticket</option><option value="2">2 tickets</option></select>
+      <select class="ticket-select" onchange="updateCard(this)"><option value="0">— Request tickets —</option><option value="1">1 ticket</option><option value="2">2 tickets</option></select>
       <span class="check">✓ Selected</span>
     </div>
   </div>
 </div>
+
 <div class="day-group">
   <h2 class="day">Thursday, September 17</h2>
   <div class="card" data-event="Alpha Gang">
@@ -144,7 +152,7 @@ footer p+p{margin-top:4px}
     <p class="credits">Dir: David Zellner, Nathan Zellner</p>
     <div class="tags"><span class="tag">Sci-Fi Comedy</span><a class="tiff-link" href="https://tiff.net/films/alpha-gang" target="_blank" rel="noopener">View on TIFF.net ↗</a></div>
     <div class="card-footer">
-      <select class="ticket-select" onchange="updateCard(this)"><option value="0">— Select tickets —</option><option value="1">1 ticket</option><option value="2">2 tickets</option></select>
+      <select class="ticket-select" onchange="updateCard(this)"><option value="0">— Request tickets —</option><option value="1">1 ticket</option><option value="2">2 tickets</option></select>
       <span class="check">✓ Selected</span>
     </div>
   </div>
@@ -155,11 +163,12 @@ footer p+p{margin-top:4px}
     <p class="credits">Dir: Banjong Pisanthanakun · Davika Hoorne</p>
     <div class="tags"><span class="tag">Supernatural Horror</span><span class="tag">Centrepiece</span><a class="tiff-link" href="https://tiff.net/films/inherit" target="_blank" rel="noopener">View on TIFF.net ↗</a></div>
     <div class="card-footer">
-      <select class="ticket-select" onchange="updateCard(this)"><option value="0">— Select tickets —</option><option value="1">1 ticket</option><option value="2">2 tickets</option><option value="3">3 tickets</option></select>
+      <select class="ticket-select" onchange="updateCard(this)"><option value="0">— Request tickets —</option><option value="1">1 ticket</option><option value="2">2 tickets</option><option value="3">3 tickets</option></select>
       <span class="check">✓ Selected</span>
     </div>
   </div>
 </div>
+
 <div class="day-group">
   <h2 class="day">Friday, September 18</h2>
   <div class="card" data-event="Kick On">
@@ -169,7 +178,7 @@ footer p+p{margin-top:4px}
     <p class="credits">Dir: Nick Kozakis</p>
     <div class="tags"><span class="tag">Thriller</span><span class="tag">World Premiere</span><span class="tag">Q&A</span><a class="tiff-link" href="https://tiff.net/films/kick-on" target="_blank" rel="noopener">View on TIFF.net ↗</a></div>
     <div class="card-footer">
-      <select class="ticket-select" onchange="updateCard(this)"><option value="0">— Select tickets —</option><option value="1">1 ticket</option><option value="2">2 tickets</option><option value="3">3 tickets</option></select>
+      <select class="ticket-select" onchange="updateCard(this)"><option value="0">— Request tickets —</option><option value="1">1 ticket</option><option value="2">2 tickets</option><option value="3">3 tickets</option></select>
       <span class="check">✓ Selected</span>
     </div>
   </div>
@@ -180,12 +189,14 @@ footer p+p{margin-top:4px}
     <p class="credits">Dir: Hur Jin-ho</p>
     <div class="tags"><span class="tag">Korean Conspiracy Thriller</span><a class="tiff-link" href="https://tiff.net/films/the-assassins" target="_blank" rel="noopener">View on TIFF.net ↗</a></div>
     <div class="card-footer">
-      <select class="ticket-select" onchange="updateCard(this)"><option value="0">— Select tickets —</option><option value="1">1 ticket</option><option value="2">2 tickets</option><option value="3">3 tickets</option></select>
+      <select class="ticket-select" onchange="updateCard(this)"><option value="0">— Request tickets —</option><option value="1">1 ticket</option><option value="2">2 tickets</option><option value="3">3 tickets</option></select>
       <span class="check">✓ Selected</span>
     </div>
   </div>
 </div>
+
 </section>
+
 <section class="rsvp" id="rsvpForm">
   <h2>RSVP</h2>
   <p class="hint">Select screenings above, then submit. If selecting for teammates, add their details below.</p>
@@ -195,29 +206,137 @@ footer p+p{margin-top:4px}
       <div class="form-group"><label>Email *</label><input type="email" name="email" placeholder="you@company.com" required></div>
     </div>
     <div class="form-group" style="margin-bottom:24px"><label>Company / Agency</label><input type="text" name="company" placeholder="Your company"></div>
+
     <div id="teammatesSection"></div>
+
     <button type="button" class="add-btn" onclick="addTeammate()">+ Add a Teammate</button>
+
     <div class="selections" id="selectionsPreview"></div>
-    <button type="submit" class="submit-btn">Submit RSVP</button>
+
+    <button type="submit" class="submit-btn">Submit Request</button>
   </form>
   <div class="email-fallback">
     <a href="mailto:chwastiak@spotify.com?subject=TIFF%202026%20Client%20Screening%20RSVP&body=Hi%20Lisa%2C%0A%0AI%20would%20like%20to%20RSVP%20for%20the%20following%20TIFF%202026%20screenings%3A%0A%0AScreenings%20%26%20Tickets%3A%0A-%20%0A%0AName%3A%20%0AEmail%3A%20%0ACompany%3A%20%0A%0ATeammate%20(if%20applicable)%3A%0AName%3A%20%0AEmail%3A%20%0A%0AThank%20you!">Or RSVP via email ↗</a>
   </div>
 </section>
+
 <footer>
   <p>Spotify Canada · TIFF 2026 Client Screenings</p>
   <p>Questions? Contact Lisa Chwastiak</p>
 </footer>
 </div>
+
 <div class="confirm" id="confirmPage">
   <div class="checkmark">✓</div>
-  <h1>RSVP Confirmed</h1>
-  <p class="msg">Thank you! Your screening selections have been received.<br>You will receive a confirmation from our team shortly.</p>
+  <h1>Request Received</h1>
+  <p class="msg">Thank you! Your screening request has been received.<br>We will confirm your ticket availability shortly.</p>
   <div id="confirmDetails" style="background:#111;border-radius:12px;padding:24px;text-align:left"></div>
   <p style="color:#444;font-size:13px;margin-top:32px">Spotify Canada · TIFF 2026 Client Screenings</p>
 </div>
+
 <script>
-var teammateCount=0;function updateCard(sel){var card=sel.closest('.card');if(parseInt(sel.value)>0){card.classList.add('selected')}else{card.classList.remove('selected')}updatePreview()}function updatePreview(){var cards=document.querySelectorAll('.card');var preview=document.getElementById('selectionsPreview');var items=[];cards.forEach(function(card){var sel=card.querySelector('select');var val=parseInt(sel.value);if(val>0){var name=card.getAttribute('data-event');items.push('<div class="sel-item"><span>'+name+'</span><span class="count">'+val+(val===1?' ticket':' tickets')+'</span></div>')}});if(items.length>0){preview.innerHTML='<h3>Your Selections</h3>'+items.join('');preview.classList.add('visible')}else{preview.classList.remove('visible');preview.innerHTML=''}}function addTeammate(){teammateCount++;var section=document.getElementById('teammatesSection');var row=document.createElement('div');row.className='teammate-row';row.id='teammate-'+teammateCount;row.innerHTML='<div class="form-group"><label>Teammate Name</label><input type="text" name="teammate_name_'+teammateCount+'" placeholder="Full name"></div><div class="form-group"><label>Teammate Email</label><input type="email" name="teammate_email_'+teammateCount+'" placeholder="email@company.com"></div><button type="button" class="remove-btn" onclick="removeTeammate('+teammateCount+')">✕</button>';section.appendChild(row)}function removeTeammate(id){var row=document.getElementById('teammate-'+id);if(row)row.remove()}function submitRSVP(e){e.preventDefault();var form=document.getElementById('rsvpFormEl');var name=form.querySelector('[name=name]').value.trim();var email=form.querySelector('[name=email]').value.trim();var company=form.querySelector('[name=company]').value.trim();if(!name||!email){alert('Please enter your name and email.');return false}var cards=document.querySelectorAll('.card');var screenings=[];cards.forEach(function(card){var sel=card.querySelector('select');var val=parseInt(sel.value);if(val>0){screenings.push(card.getAttribute('data-event')+' ('+val+(val===1?' ticket':' tickets')+')')}});if(screenings.length===0){alert('Please select at least one screening.');return false}var teammates=[];document.querySelectorAll('[id^=teammate-]').forEach(function(row){var tName=row.querySelector('[name^=teammate_name]').value.trim();var tEmail=row.querySelector('[name^=teammate_email]').value.trim();if(tName&&tEmail)teammates.push(tName+' ('+tEmail+')')});var subject='TIFF 2026 Client Screening RSVP - '+name;var body='New RSVP Submission\n\nName: '+name+'\nEmail: '+email+'\nCompany: '+(company||'N/A')+'\n\nScreenings:\n'+screenings.map(function(s){return'- '+s}).join('\n')+'\n';if(teammates.length>0){body+='\nTeammates:\n'+teammates.map(function(t){return'- '+t}).join('\n')+'\n'}window.location.href='mailto:chwastiak@spotify.com?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body);document.getElementById('mainPage').style.display='none';var confirm=document.getElementById('confirmPage');confirm.classList.add('visible');var details=document.getElementById('confirmDetails');details.innerHTML='<h3 style="font-size:12px;color:#666;text-transform:uppercase;letter-spacing:1px;margin-bottom:16px;font-weight:600">Your Selections</h3>'+screenings.map(function(s){return'<div style="padding:8px 0;border-bottom:1px solid #222;font-size:14px;color:#fff">'+s+'</div>'}).join('');return false}
+var teammateCount = 0;
+
+function updateCard(sel) {
+  var card = sel.closest('.card');
+  if (parseInt(sel.value) > 0) {
+    card.classList.add('selected');
+  } else {
+    card.classList.remove('selected');
+  }
+  updatePreview();
+}
+
+function updatePreview() {
+  var cards = document.querySelectorAll('.card');
+  var preview = document.getElementById('selectionsPreview');
+  var items = [];
+  cards.forEach(function(card) {
+    var sel = card.querySelector('select');
+    var val = parseInt(sel.value);
+    if (val > 0) {
+      var name = card.getAttribute('data-event');
+      items.push('<div class="sel-item"><span>' + name + '</span><span class="count">' + val + (val === 1 ? ' ticket' : ' tickets') + '</span></div>');
+    }
+  });
+  if (items.length > 0) {
+    preview.innerHTML = '<h3>Your Selections</h3>' + items.join('');
+    preview.classList.add('visible');
+  } else {
+    preview.classList.remove('visible');
+    preview.innerHTML = '';
+  }
+}
+
+function addTeammate() {
+  teammateCount++;
+  var section = document.getElementById('teammatesSection');
+  var row = document.createElement('div');
+  row.className = 'teammate-row';
+  row.id = 'teammate-' + teammateCount;
+  row.innerHTML = '<div class="form-group"><label>Teammate Name</label><input type="text" name="teammate_name_' + teammateCount + '" placeholder="Full name"></div>' +
+    '<div class="form-group"><label>Teammate Email</label><input type="email" name="teammate_email_' + teammateCount + '" placeholder="email@company.com"></div>' +
+    '<button type="button" class="remove-btn" onclick="removeTeammate(' + teammateCount + ')">✕</button>';
+  section.appendChild(row);
+}
+
+function removeTeammate(id) {
+  var row = document.getElementById('teammate-' + id);
+  if (row) row.remove();
+}
+
+function submitRSVP(e) {
+  e.preventDefault();
+  var form = document.getElementById('rsvpFormEl');
+  var name = form.querySelector('[name=name]').value.trim();
+  var email = form.querySelector('[name=email]').value.trim();
+  var company = form.querySelector('[name=company]').value.trim();
+
+  if (!name || !email) { alert('Please enter your name and email.'); return false; }
+
+  var cards = document.querySelectorAll('.card');
+  var screenings = [];
+  cards.forEach(function(card) {
+    var sel = card.querySelector('select');
+    var val = parseInt(sel.value);
+    if (val > 0) {
+      screenings.push(card.getAttribute('data-event') + ' (' + val + (val === 1 ? ' ticket' : ' tickets') + ')');
+    }
+  });
+
+  if (screenings.length === 0) { alert('Please select at least one screening.'); return false; }
+
+  var teammates = [];
+  document.querySelectorAll('[id^=teammate-]').forEach(function(row) {
+    var tName = row.querySelector('[name^=teammate_name]').value.trim();
+    var tEmail = row.querySelector('[name^=teammate_email]').value.trim();
+    if (tName && tEmail) teammates.push(tName + ' (' + tEmail + ')');
+  });
+
+  var subject = 'TIFF 2026 Client Screening RSVP - ' + name;
+  var body = 'New RSVP Submission\n\n' +
+    'Name: ' + name + '\n' +
+    'Email: ' + email + '\n' +
+    'Company: ' + (company || 'N/A') + '\n\n' +
+    'Screenings:\n' + screenings.map(function(s){ return '- ' + s; }).join('\n') + '\n';
+
+  if (teammates.length > 0) {
+    body += '\nTeammates:\n' + teammates.map(function(t){ return '- ' + t; }).join('\n') + '\n';
+  }
+
+  window.location.href = 'mailto:chwastiak@spotify.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+
+  document.getElementById('mainPage').style.display = 'none';
+  var confirm = document.getElementById('confirmPage');
+  confirm.classList.add('visible');
+  var details = document.getElementById('confirmDetails');
+  details.innerHTML = '<h3 style="font-size:12px;color:#666;text-transform:uppercase;letter-spacing:1px;margin-bottom:16px;font-weight:600">Your Selections</h3>' +
+    screenings.map(function(s) {
+      return '<div style="padding:8px 0;border-bottom:1px solid #222;font-size:14px;color:#fff">' + s + '</div>';
+    }).join('');
+
+  return false;
+}
 </script>
 </body>
 </html>
